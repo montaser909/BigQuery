@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_trips
+    description: "Staging table for Austin bike share trips - cleaned and standardized from raw data"
+    columns:
+      - name: trip_id
+        description: "Unique identifier for each trip"
+        tests:
+          - unique
+          - not_null
