@@ -10,6 +10,6 @@ SELECT
   start_station_name as start_station,
   start_time as trip_start,
   subscriber_type as user_type,
-  trip_id
+  trip_id as trip_id
 FROM
   {{ source("austin","bikeshare_trips") }}
