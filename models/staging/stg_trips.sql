@@ -12,4 +12,4 @@ SELECT
   subscriber_type as user_type,
   trip_id as trip_id
 FROM
-  {{ source("austin","bikeshare_trips") }}
+  {{ source("austin_bikeshare","bikeshare_trips") }}

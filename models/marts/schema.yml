@@ -1,0 +1,22 @@
+
+version: 2
+
+models:
+  - name: dim_stations
+    description: "Dimension table containing Austin Bikeshare stations."
+    columns:
+      - name: station_id
+        description: "Natural key for the station."
+        tests:
+          - not_null
+          - unique
+
+      - name: station_name
+        description: "Station display name."
+
+      - name: status
+        description: "Station operational status."
+
+      - name: is_active_station
+        description: "Boolean indicating if the station is active."
+
