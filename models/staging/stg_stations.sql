@@ -1,6 +1,12 @@
 
-{{ config(materialized='view') }}
+with 
 
+source as (
+
+    select * from {{ source('austin_bikeshare', 'bikeshare_stations') }}
+
+),
+renamed as (
 select
     station_id,
     name as station_name,
@@ -8,4 +14,6 @@ select
     location,
     status,
     property_type
-from {{ source('austin_bikeshare', 'bikeshare_stations') }}
+from source )
+
+select * from renamed
