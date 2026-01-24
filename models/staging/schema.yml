@@ -9,3 +9,11 @@ models:
         tests:
           - unique
           - not_null
+  - name: stg_stations
+    description: :"stations"
+    columns:
+      - name: station_id 
+        tests:
+          - unique
+          - not_null
+          
